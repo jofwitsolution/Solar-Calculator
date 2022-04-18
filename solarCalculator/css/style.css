@@ -1,0 +1,129 @@
+body {
+    font-family: 'Arvo', serif;
+}
+
+@media screen and (min-width:376px) {
+    /* 376px and up */
+    #panels {
+        display: none;
+    }
+    @keyframes anima {
+        0% {
+            left: -300px;
+        }
+        50% {
+            left: 0px;
+        }
+        100% {
+            left: 300px;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    /* 768px and up */
+    #panels {
+        display: none;
+    }
+}
+
+@media screen and (min-width:992px) {
+    /* 992px and up */
+    #image {
+        display: none;
+    }
+    #panels {
+        display: block;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    /* 1200px and up */
+    #image {
+        display: none;
+    }
+    #panels {
+        display: block;
+    }
+    @keyframes anima {
+        0% {
+            left: -600px;
+        }
+        50% {
+            left: 0px;
+        }
+        100% {
+            left: 600px;
+        }
+    }
+}
+
+.title-underline {
+    width: 100px;
+    height: 10px;
+    margin: 0 auto;
+    /* background: blue!important;*/
+}
+
+#list-item {
+    font-size: 15pt;
+}
+
+#error {
+    display: none;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.table-field {
+    border: thin solid;
+    margin: 20px;
+}
+
+th,
+td {
+    text-align: center;
+    border: thin solid;
+    padding: 10px;
+}
+
+.valu-input {
+    border-color: goldenrod;
+    width: 100px;
+    text-align: center;
+}
+
+.valu-input:invalid {
+    border-color: red;
+}
+
+.valu-input:valid {
+    border-color: green;
+}
+
+#text-area {
+    display: none;
+    font-family: times;
+    font-size: 16px;
+}
+
+#border {
+    width: 60%;
+    border-style: outset;
+    border-color: black;
+    border-width: 2px;
+    margin: 0 auto;
+}
+
+#paragraph {
+    font-family: times;
+    font-size: 16px;
+}
+
+.scroll {
+    position: relative;
+    animation-name: anima;
+    animation-duration: 20s;
+    animation-delay: 0s;
+    animation-iteration-count: 100;
+}

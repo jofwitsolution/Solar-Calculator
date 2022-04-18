@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a solar inverter calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/calc.png">
+    <title>Solar Calculator</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- font-awesome -->
+    <script src="./js/all.js"></script>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body onload="navbarHeaderFooter();">
+    <noscript>
+        <p>
+        This web page uses JavaScript. For proper results,
+        you must use a web browser with JavaScript enabled.
+        </p>
+    </noscript>
+    <section id="developer" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 height">
+                    <img src="img/solarlogo-1.jpeg" alt="solarlogo" class="img-fluid" />
+                    <h2 class="text-info mb-2 text-center">Did you know?</h2>
+                    <p id="paragraph" class="text-justify lead">
+                        <dfn class="font-weight-bold">Solar power</dfn> is the conversion of energy from sunlight into electricity, either directly using photovoltaics (PV), indirectly using concentrated solar power, or a combination. Photovoltaic cells
+                        convert light into an electric current using the photovoltaic effect. Photovoltaics were initially solely used as a source of electricity for small and medium-sized applications, from the calculator powered by a single solar cell
+                        to remote homes powered by an off-grid rooftop PV system. Many industrialized nations have installed significant solar power capacity into their grids to supplement or provide an alternative to conventional energy sources while
+                        an increasing number of less developed nations have turned to solar to reduce dependence on expensive fuels.
+                    </p>
+                    <p id="paragraph" class="text-justify lead">
+                        Long distance transmission allows remote renewable energy resources to displace fossil fuel consumption. Solar power plants use one of two technologies:
+                    </p>
+                    <ul id="paragraph" class="text-justify">
+                        <li>
+                            Photovoltaic (PV) systems use solar panels, either on rooftops or in ground-mounted solar farms, converting sunlight directly into electric power.
+                        </li>
+                        <li>
+                            Concentrated solar power (CSP, also known as "concentrated solar thermal") plants use solar thermal energy to make steam, that is thereafter converted into electricity by a turbine.
+                        </li>
+                    </ul>
+                    <p id="paragraph" class="lead text-info">
+                        The below is the list of major components/device needed for solar installation:
+                    </p>
+                    <ul id="paragraph">
+                        <li>Solar Panel</li>
+                        <li>Charge Controller</li>
+                        <li>Deep Cycle Battery</li>
+                        <li>Inverter</li>
+                        <li>Connecting Cable</li>
+                        <li>Racking</li>
+                    </ul>
+                    <!-- image: to display on small and medium screen -->
+                    <div class="mt-4" id="image">
+                        <img src="img/monocrystalline.jpg" alt="monocrystalline" class="img-fluid">
+                    </div>
+                    <div class="mt-4" id="image">
+                        <img src="img/polycrystalline.jpg" alt="polycrystalline" class="img-fluid">
+                    </div>
+                    <div class="my-4" id="image">
+                        <img src="img/thinfilm.jpg" alt="thinfilm" class="img-fluid">
+                    </div>
+                    <!-- end of image -->
+                    <!-- Carousel: to display on large screen -->
+                    <div id="panels" class="carousel slide" data-ride="carousel">
+                        <!-- indicators -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#panels" data-slide-to="0" class="active"></li>
+                            <li data-target="#panels" data-slide-to="1"></li>
+                            <li data-target="#panels" data-slide-to="2"></li>
+                        </ul>
+                        <!-- images -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/monocrystalline.jpg" alt="project" class="d-block w-100">
+                            </div>
+                            <div class=" carousel-item ">
+                                <img src="img/polycrystalline.jpg" alt="project " class="d-block w-100">
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="img/thinfilm.jpg" alt="project " class="d-block w-100">
+                            </div>
+                        </div>
+                        <!-- end of images -->
+                        <!-- controls -->
+                        <a href="#panels" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon carousel-success"></span>
+                        </a>
+                        <a href="#panels" class="carousel-control-next" data-slide="prev">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                        <!-- end of controls -->
+                    </div>
+                    <!-- end of carousel -->
+                </div>
+                <div class="col-md-6 col-lg-6 mt-1 height">
+                    <h5 class="text-center text-info">Solar Panels</h5>
+                    <p id="border"></p>
+                    <p id="paragraph" class="lead mt-2">
+                        Most of the solar panel options currently available fit in one of three types: monocrystalline, polycrystalline (also known as multi-crystalline), and thin-film. These solar panels vary in how they’re made, appearance, performance, costs, and the installations
+                        each are best suited for. Depending on the type of installationyou’re considering, one option may be more suitable than the others.
+                    </p>
+                    <h6>The major types of solar panels</h6>
+                    <p id="paragraph" class="lead mt-2">
+                        There are three major types of solar panels: monocrystalline, polycrystalline, and thin-film. Each type has its own unique advantages and disadvantages, and the solar panel type best suited for your installation will depend on factors specific to your
+                        own property and desired system characteristics.
+                    </p>
+                    <h6>What are different solar panels made of? </h6>
+                    <p id="paragraph" class="lead mt-2">
+                        To produce electricity, solar cells are made from a semiconducting material that converts light into electricity. The most common material used as a semiconductor during the solar cell manufacturing process is silicon. Both monocrystalline and polycrystalline
+                        solar panels have cells made of silicon wafers. To build a monocrystalline or polycrystalline panel, wafers are assembled into rows and columns to form a rectangle, covered with a glass sheet, and framed together. While both of
+                        these types of solar panels have cells made from silicon, monocrystalline and polycrystalline panels vary in the composition of the silicon itself. Monocrystalline solar cells are cut from a single, pure crystal of silicon. Alternatively,
+                        polycrystalline solar cells are composed of fragments of silicon crystals that are melted together in a mold before being cut into wafers.
+                    </p>
+                    <p id="paragraph" class="lead mt-2">
+                        Unlike monocrystalline and polycrystalline solar panels, thin-film panels are made from a variety of materials. The most prevalent type of thin-film solar panel is made from cadmium telluride (CdTe). To make this type of thin-film panel, manufacturers
+                        place a layer of CdTe between transparent conducting layers that help capture sunlight. This type of thin-film technology also has a glass layer on the top for protection. Thin-film solar panels can also be made from amorphous
+                        silicon (a-Si), which is similar to the composition of monocrystalline and polycrystalline panels. Though these thin-film panels use silicon in their composition, they are not made up of solid silicon wafers. Rather, they’re composed
+                        of non-crystalline silicon placed on top of glass, plastic, or metal. Lastly, Copper Indium Gallium Selenide (CIGS) panels are another popular type of thin-film technology. CIGS panels have all four elements placed between two
+                        conductive layers (i.e. glass, plastic, aluminum, or steel), and electrodes are placed on the front and the back of the material to capture electrical currents.
+                    </p>
+                    <h6>Solar panel power and efficiency ratings </h6>
+                    <strong class="text-info">Monocrystalline and polycrystalline solar panels</strong><br>
+                    <p id="paragraph" class="lead mt-2">
+                        Of all panel types, monocrystalline typically have the highest efficiencies and power capacity. Most monocrystalline solar panels often reach efficiencies higher than 20 percent, while polycrystalline solar panels usually have efficiencies between 15
+                        to 17 percent. Monocrystalline solar panels tend to generate more power than other types of panels not only because of their efficiency but because they have come in higher wattage modules as well. Many monocrystalline solar panels
+                        come with more than 300 watts (W) of power capacity, some reaching more than 350 W. Polycrystalline solar panels, on the other hand, tend to have lower wattages. This doesn’t mean that monocrystalline and polycrystalline solar
+                        panels aren’t physically the same size - in fact, both types of solar panels tend to come with 60 silicon cells each, with 72 or 96 cell variants (usually for large-scale installations). But even with the same number of cells,
+                        monocrystalline panels are capable of producing more electricity.
+                    </p>
+                    <h6>Type of panel best for your installation</h6>
+                    <p id="paragraph" class="lead mt-2">
+                        Property owners with a lot of space for solar panels can save money upfront by installing lower efficiency, lower-cost polycrystalline panels. If you have limited space available and are looking to maximize your electric bill savings, you can do so by
+                        installing high-efficiency, monocrystalline solar panels. As far as thin-film panels go, it’s most common to choose this type of solar panel if you’re installing on a large, commercial roof that cannot handle the additional weight
+                        of traditional solar equipment. These types of roofs can also afford the lower efficiencies of thin-film panels because they have more area to place them on. Additionally, thin-film panels can sometimes be a useful solution for
+                        portable solar systems, like on RVs or boats.
+                    </p>
+                </div>
+
+                <!-- developer section -->
+                <div class="col-md-6 col-lg-4 my-4">
+                    <h3 class="display-6 text-uppercase text-dark mb-0 text-center">
+                        <strong class="text-info">developer</strong>
+                    </h3>
+                    <div class="title-underline bg-warning"></div>
+                    <div class="card">
+                        <img id="temp" src="./img/developer.jpg" alt="member" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title text-capitalize">Joseph Oluwafemi Faleye</h5>
+                            <p class="card-text">Click below icons to visit my social media accounts</p>
+
+                        </div>
+                        <div class="card-footer bg-secondary d-flex justify-content-around">
+                            <a href="#">
+                                <i class="fab fa-facebook fa-2x text-dark"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter fa-2x text-dark"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-youtube fa-2x text-dark"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-google fa-2x text-dark"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="text-center">
+                        <a href="#" class="btn btn-outline-info text-uppercase w-25 mt-3">Top</a>
+                    </div>
+                </div>
+                <!-- end of developer section -->
+            </div>
+        </div>
+    </section>
+
+    <!-- jquery -->
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <!-- js -->
+    <script src="./js/bootstrap.bundle.min.js "></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

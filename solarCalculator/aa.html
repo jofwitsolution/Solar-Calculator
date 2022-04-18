@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="solarcalculator" content="solarinvertercalculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/calc.png">
+    <title>Calculator</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- font-awesome -->
+    <script src="./js/all.js"></script>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet">
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body onload="navbarHeaderFooter();">
+    <section class="bg-light py-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 text-info">
+                    <h3 class="text-primary font-weight-bold text-capitalize">solar solution</h3>
+                    <p>Select from a list of appliances in the below list box and click proceed. For appliance that's not in the list box, add manually using the input field and then click the "ADD" button.</p>
+                    <form class="form-inline">
+                        <label for="appliances">Appliances&nbsp;</label>
+                        <select class="custom-select my-1 mr-2" name="appliances" id="appliances" size="5" multiple required>
+                            <option label="Television">Television</option>
+                      <option label="Plasma TV">Plasma TV</option>
+                      <option label="Small TV">Small TV</option>
+                      <option label="Bulb">Bulb</option>
+                      <option label="Energy Saver bulb">Energy Saver Bulb</option>
+                      <option label="Radio">Radio</option>
+                      <option label="Home Theater">Home Theater</option>
+                      <option label="DVD">dvd</option>
+                      <option label="Decoder">decoder</option>
+                      <option label="Coffee Pot">coffeePot</option>
+                      <option label="Coffee Maker">coffeeMaker</option>
+                      <option label="Toaster">toaster</option>
+                      <option label="Popcorn Popper">popcornPopper</option>
+                      <option label="Blender">blender</option>
+                      <option label="Microwave">microwave</option>
+                      <option label="Waffle Iron">waffleIron</option>
+                      <option label="Hot Plate">hotPlate</option>
+                      <option label="Frying Pan">Frying Pan</option>
+                    </select>
+                        <input type="button" value="Proceed" class="btn btn-primary mt-2" onclick="createfield(this.form);" />
+                    </form>
+                    <div>
+                        <form class="form-inline mt-2">
+                            <label for="additional-input">Add appl.&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control w-50" name="additional-input" id="additional-input" value="" placeholder="Appliance name" /><br>
+                            <input type="button" value="ADD" class="btn btn-primary mx-1 my-auto" onclick="addappliance(this.form);" />
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-3 col-lg-2 text-info">
+                        <form class="form-inline mt-2">
+                            <label for="additional-input">Add appl.&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control w-50" name="additional-input" id="additional-input" value="" placeholder="Appliance name" /><br>
+                            <input type="button" value="ADD" class="btn btn-primary mx-1 my-auto" onclick="addappliance(this.form);" />
+                        </form>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 text-info">
+                        <form class="form-inline mt-2">
+                            <label for="additional-input">Add appl.&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control w-50" name="additional-input" id="additional-input" value="" placeholder="Appliance name" /><br>
+                            <input type="button" value="ADD" class="btn btn-primary mx-1 my-auto" onclick="addappliance(this.form);" />
+                        </form>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 text-info">
+                        <form class="form-inline mt-2">
+                            <label for="additional-input">Add appl.&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control w-50" name="additional-input" id="additional-input" value="" placeholder="Appliance name" /><br>
+                            <input type="button" value="ADD" class="btn btn-primary mx-1 my-auto" onclick="addappliance(this.form);" />
+                        </form>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 text-info">
+                        <form class="form-inline mt-2">
+                            <label for="additional-input">Add appl.&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control w-50" name="additional-input" id="additional-input" value="" placeholder="Appliance name" /><br>
+                            <input type="button" value="ADD" class="btn btn-primary mx-1 my-auto" onclick="addappliance(this.form);" />
+                        </form>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 text-info">
+                        <form class="form-inline mt-2">
+                            <label for="additional-input">Add appl.&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control w-50" name="additional-input" id="additional-input" value="" placeholder="Appliance name" /><br>
+                            <input type="button" value="ADD" class="btn btn-primary mx-1 my-auto" onclick="addappliance(this.form);" />
+                        </form>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 text-info">
+                        <form class="form-inline mt-2">
+                            <label for="additional-input">Add appl.&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control w-50" name="additional-input" id="additional-input" value="" placeholder="Appliance name" /><br>
+                            <input type="button" value="ADD" class="btn btn-primary mx-1 my-auto" onclick="addappliance(this.form);" />
+                        </form>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 text-info">
+                        <form class="form-inline mt-2">
+                            <label for="additional-input">Add appl.&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control w-50" name="additional-input" id="additional-input" value="" placeholder="Appliance name" /><br>
+                            <input type="button" value="ADD" class="btn btn-primary mx-1 my-auto" onclick="addappliance(this.form);" />
+                        </form>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 text-info">
+                        <form class="form-inline mt-2">
+                            <label for="additional-input">Add appl.&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control w-50" name="additional-input" id="additional-input" value="" placeholder="Appliance name" /><br>
+                            <input type="button" value="ADD" class="btn btn-primary mx-1 my-auto" onclick="addappliance(this.form);" />
+                        </form>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 text-info">
+                        <form class="form-inline mt-2">
+                            <label for="additional-input">Add appl.&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control w-50" name="additional-input" id="additional-input" value="" placeholder="Appliance name" /><br>
+                            <input type="button" value="ADD" class="btn btn-primary mx-1 my-auto" onclick="addappliance(this.form);" />
+                        </form>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 text-info">
+                        <form class="form-inline mt-2">
+                            <label for="additional-input">Add appl.&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control w-50" name="additional-input" id="additional-input" value="" placeholder="Appliance name" /><br>
+                            <input type="button" value="ADD" class="btn btn-primary mx-1 my-auto" onclick="addappliance(this.form);" />
+                        </form>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 text-info">
+                        <form class="form-inline mt-2">
+                            <label for="additional-input">Add appl.&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control w-50" name="additional-input" id="additional-input" value="" placeholder="Appliance name" /><br>
+                            <input type="button" value="ADD" class="btn btn-primary mx-1 my-auto" onclick="addappliance(this.form);" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jquery -->
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <!-- js -->
+    <script src="./js/bootstrap.bundle.min.js "></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
